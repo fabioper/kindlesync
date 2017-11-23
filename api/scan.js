@@ -14,12 +14,9 @@ const formatFile = filepath => {
 
 const scan = async (directory, extensions) => {
     const files = await fs.readdir(directory)
-    const filteredFiles = filterByExtension(files, extensions)
-    const formattedFiles = filteredFiles.map(filename => formatFile(
+    return filterByExtension(files, extensions).map(filename => formatFile(
         path.join(directory, filename)
     ))
-
-    return formattedFiles
 }
 
 module.exports = scan
