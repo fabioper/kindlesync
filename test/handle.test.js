@@ -4,7 +4,7 @@ const handle = require('../api/handle')
 describe('handle()', () => {
     it('should return a mobi file', done => {
         const file = {
-            name: 'logic-language-models-computer-science-3rd',
+            name: 'logic-language-models-computer-science',
             ext: '.epub',
             size: 11000,
             path: './dir-test'

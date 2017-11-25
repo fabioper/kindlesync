@@ -1,14 +1,18 @@
-const composeHandlers = (...handlers) => file => (
-    handlers.reduce((prev, curr) => (
-        prev.then(
-            file => curr(file),
-            err => console.log(err)
-        )
-    ), Promise.resolve(file))
-)
+const handlers = {
+    '.pdf': async file => {
+        console.log(`${file.name} is a pdf file`)
+        return file
+    },
+    '.mobi': async file => {
+        console.log(`${file.name} is a mobi file`)
+        return file
+    },
+    '.epub': async file => {
+        console.log(`${file.name} is a epub file`)
+        return file
+    }
+}
 
-const handle = composeHandlers(
-    /* Put handlers here */
-)
+const handle = file => handlers[file.ext](file)
 
 module.exports = handle
