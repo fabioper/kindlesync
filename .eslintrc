@@ -21,7 +21,6 @@
         "array-bracket-spacing": "error",
         "array-callback-return": "error",
         "arrow-body-style": ["warn", "as-needed"],
-        "array-element-newline": ["error", { "multiline": true, "minItems": 4 }],
         "arrow-parens": ["error", "as-needed"],
         "block-spacing": "error",
         "block-scoped-var": "error",

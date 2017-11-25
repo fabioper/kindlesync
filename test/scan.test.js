@@ -29,12 +29,9 @@ describe('scan()', () => {
                 expect(documents).to.have.lengthOf(7)
 
                 documents.forEach(doc => {
-                    expect(doc).to.have.keys([
-                        'name',
-                        'ext',
-                        'path',
-                        'size'
-                    ])
+                    expect(doc).to.have.keys(
+                        ['name', 'ext', 'path', 'size']
+                    )
                 })
 
                 done()
