@@ -2,7 +2,7 @@ const { expect } = require('chai')
 const handle = require('../api/handle')
 
 describe('handle()', () => {
-    it('should return a mobi file', done => {
+    xit('should return a mobi file', done => {
         const file = {
             name: 'logic-language-models-computer-science',
             ext: '.epub',
