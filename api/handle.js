@@ -1,18 +1,5 @@
-const handlers = {
-    '.pdf': async file => {
-        console.log(`${file.name} is a pdf file`)
-        return file
-    },
-    '.mobi': async file => {
-        console.log(`${file.name} is a mobi file`)
-        return file
-    },
-    '.epub': async file => {
-        console.log(`${file.name} is a epub file`)
-        return file
-    }
-}
+const handlers = {}
 
-const handle = file => handlers[file.ext](file)
+const handle = file => handlers[file.ext](file) || file
 
 module.exports = handle
