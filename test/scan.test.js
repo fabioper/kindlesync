@@ -6,17 +6,14 @@ const folder = './dir-test'
 
 mock({
     [folder]: {
-        'Bertoli M. - React Design Patterns and Best Practices - 2017.mobi': '',
+        'bertoli-m-react-design-patterns-and-best-practices.mobi': '',
         'building-evolutionary-architectures.rar': '',
-        'common-sense-guide-data-structures-algorithms.rar': '',
         'identity-data-security-web-development.pdf': '',
         'identity-data-security-web-development.epub': '',
-        'logic-language-models-computer-science-3rd.epub': '',
-        '018 List of Competition Analysis Tools.html': '',
-        'learning-redux.azw3': '',
-        'dark-space-1366x768-stars-4k-8k-7935.jpg': '',
-        '016 Introduction to Competition Analysis.mp4': '',
-        '03-Configuring your development environment.en.srt': ''
+        'logic-language-models-computer-science.epub': '',
+        'list-of-competition-analysis-tools.html': '',
+        'dark-space-stars.jpg': '',
+        'introduction-to-competition-analysis.mp4': ''
     }
 })
 
@@ -26,7 +23,7 @@ describe('scan()', () => {
 
         scan(folder, extensions)
             .then(documents => {
-                expect(documents).to.have.lengthOf(7)
+                expect(documents).to.have.lengthOf(6)
 
                 documents.forEach(doc => {
                     expect(doc).to.have.keys(
